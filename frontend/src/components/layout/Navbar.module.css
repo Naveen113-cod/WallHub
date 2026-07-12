@@ -1,0 +1,36 @@
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-height);transition:all var(--transition-slow);padding:0 24px}
+.nav.scrolled{background:var(--bg-glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);box-shadow:var(--shadow-sm)}
+.inner{max-width:1400px;margin:0 auto;height:100%;display:flex;align-items:center;gap:32px}
+.logo{font-family:var(--font-display);font-size:24px;font-weight:900;letter-spacing:1px;flex-shrink:0}
+.logoW{color:var(--text-primary)}.logoHub{color:var(--accent)}
+.links{display:flex;align-items:center;gap:4px;flex:1}
+.link{display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:var(--radius-full);font-size:14px;font-weight:500;color:var(--text-secondary);transition:all var(--transition)}
+.link:hover{color:var(--text-primary);background:var(--bg-card)}
+.actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.iconBtn{width:38px;height:38px;border-radius:var(--radius-full);background:var(--bg-card);border:1px solid var(--border);color:var(--text-secondary);display:flex;align-items:center;justify-content:center;transition:all var(--transition)}
+.iconBtn:hover{color:var(--text-primary);border-color:var(--accent);box-shadow:0 0 12px var(--accent-glow)}
+.searchForm{display:flex;align-items:center;gap:6px;animation:expandIn 0.2s ease}
+@keyframes expandIn{from{opacity:0;transform:scaleX(0.8)}to{opacity:1;transform:scaleX(1)}}
+.searchInput{background:var(--bg-card);border:1px solid var(--accent);border-radius:var(--radius-full);padding:8px 16px;font-size:14px;color:var(--text-primary);width:200px;box-shadow:0 0 12px var(--accent-glow)}
+.searchInput::placeholder{color:var(--text-muted)}
+.authBtns{display:flex;align-items:center;gap:8px}
+.userMenu{position:relative}
+.userMenu:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+.avatar{width:38px;height:38px;border-radius:var(--radius-full);background:var(--gradient-brand);color:#fff;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;border:2px solid transparent;transition:all var(--transition)}
+.avatar:hover{border-color:var(--accent-light);box-shadow:0 0 16px var(--accent-glow)}
+.dropdown{position:absolute;top:calc(100% + 10px);right:0;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:8px;min-width:210px;box-shadow:var(--shadow-lg);opacity:0;visibility:hidden;transform:translateY(-8px);transition:all var(--transition);z-index:999}
+.dropHeader{padding:10px 12px;display:flex;flex-direction:column;gap:2px}
+.dropHeader strong{font-size:14px;color:var(--text-primary)}
+.dropHeader span{font-size:12px;color:var(--text-muted)}
+.dropDivider{height:1px;background:var(--border);margin:4px 0}
+.dropItem{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:var(--radius-md);font-size:14px;color:var(--text-secondary);width:100%;background:none;border:none;text-align:left;transition:all var(--transition);cursor:pointer}
+.dropItem:hover{background:var(--bg-card-hover);color:var(--text-primary)}
+.dropLogout{color:var(--red)!important}.dropLogout:hover{background:rgba(255,71,87,0.1)!important}
+.hamburger{display:none;width:38px;height:38px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-md);color:var(--text-primary);align-items:center;justify-content:center}
+.mobileMenu{display:flex;flex-direction:column;gap:4px;padding:12px 16px 16px;background:var(--bg-glass);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);animation:slideDown 0.2s ease}
+@keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+.mobileLink{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:var(--radius-md);font-size:15px;color:var(--text-secondary);background:none;border:none;width:100%;text-align:left;cursor:pointer;transition:all var(--transition)}
+.mobileLink:hover{background:var(--bg-card);color:var(--text-primary)}
+.mobileLinkAccent{color:var(--accent)}.mobileLinkRed{color:var(--red)}
+@media(max-width:900px){.links{display:none}.authBtns{display:none}.hamburger{display:flex}}
+@media(max-width:480px){.nav{padding:0 16px}.searchInput{width:150px}}

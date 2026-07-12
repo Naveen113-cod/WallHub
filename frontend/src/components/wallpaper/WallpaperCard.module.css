@@ -1,0 +1,19 @@
+.card{display:block;border-radius:var(--radius-lg);overflow:hidden;background:var(--bg-card);border:1px solid var(--border);transition:all 0.25s ease;cursor:pointer;text-decoration:none}
+.card:hover{transform:translateY(-4px);border-color:var(--border-hover);box-shadow:var(--shadow-md)}
+.imgWrap{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--bg-secondary)}
+.imgSkeleton{position:absolute;inset:0;border-radius:0}
+.img{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 0.4s ease,transform 0.4s ease}
+.imgVisible{opacity:1}.card:hover .img{transform:scale(1.05)}
+.overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 50%);opacity:0;transition:opacity 0.25s ease;display:flex;flex-direction:column;justify-content:space-between;padding:12px}
+.card:hover .overlay{opacity:1}
+.overlayActions{display:flex;gap:8px;align-self:flex-end}
+.action{display:flex;align-items:center;gap:5px;padding:6px 12px;border-radius:var(--radius-full);background:rgba(0,0,0,0.6);backdrop-filter:blur(8px);color:#fff;font-size:12px;font-weight:600;border:1px solid rgba(255,255,255,0.15);transition:all var(--transition);cursor:pointer}
+.action:hover{background:var(--accent);border-color:var(--accent)}
+.actionLiked{color:#ff6b9d!important}.actionLiked svg{fill:#ff6b9d}
+.viewBtn{width:42px;height:42px;border-radius:var(--radius-full);background:rgba(108,99,255,0.85);display:flex;align-items:center;justify-content:center;color:#fff;align-self:flex-start;margin-top:auto;box-shadow:0 4px 16px rgba(108,99,255,0.5)}
+.categoryBadge{position:absolute;top:10px;left:10px;background:rgba(0,0,0,0.65);backdrop-filter:blur(8px);color:#fff;font-size:10px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;padding:4px 9px;border-radius:var(--radius-full);border:1px solid rgba(255,255,255,0.15)}
+.featuredBadge{position:absolute;top:10px;right:10px;background:rgba(240,192,64,0.9);color:#000;font-size:10px;font-weight:800;padding:4px 9px;border-radius:var(--radius-full)}
+.info{padding:12px 14px}
+.title{font-size:14px;font-weight:600;color:var(--text-primary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:6px}
+.meta{display:flex;align-items:center;gap:12px;color:var(--text-muted);font-size:12px}
+.meta span{display:flex;align-items:center;gap:4px}
