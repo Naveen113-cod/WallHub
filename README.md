@@ -19,7 +19,7 @@ WallHUB is a full-stack wallpaper application built using the MERN stack that al
 
 **Frontend:** React.js, JavaScript, HTML5, CSS3  
 **Backend:** Node.js, Express.js  
-**Database:** MongoDB Atlas  
+**Database:** MongoDB   
 **Cloud Storage:** Cloudinary  
 **Tools:** Git, GitHub, VS Code, Postman
 
